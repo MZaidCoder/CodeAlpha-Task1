@@ -1,0 +1,267 @@
+/* Reset and Box Sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(
+       30deg,
+        rgb(210, 206, 165),#af9b3f
+    );
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Banner */
+.banner {
+    padding: 20px;
+    text-align: center;
+}
+
+.banner img {
+    border-radius: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Page Titles */
+.page-title {
+    font-size: 50px;
+    text-align: center;
+    color: #02027b;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Bio Block */
+.bio-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.bio-block p {
+    color: rgb(13, 13, 13);
+    font-size: large;
+    padding: 20px;
+}
+
+/* Section Heading */
+.sec-heading {
+    color: #0000ff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Container and Box */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    width: 96vw;
+}
+
+.box {
+    border: 1px solid black;
+    width: 150vh;
+    background-color: #f5bd8c;
+    margin: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.box img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box-title {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.box-bio {
+    font-size: large;
+}
+
+.box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button */
+.btn {
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 15px;
+    margin: 10px auto;
+    display: block;
+    width: fit-content;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Skills Section */
+.title-skills {
+    text-align: center;
+    font-size: 36px;
+    color: #02027b;
+    margin-top: 20px;
+}
+
+.skills-smry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    border: 1px solid #2c2c2c;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* My Skill */
+.my-skill {
+    padding-left: 32vw;
+    margin-top: 5px;
+}
+
+.my-skill ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.my-skill ul li {
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+/* Education */
+.title-edu {
+    text-align: center;
+    font-size: 36px;
+    color: #02027b;
+    margin-top: 20px;
+}
+
+#USKT {
+    color: rgb(13, 13, 13);
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+/* Contact Section */
+.Contact {
+    text-align: center;
+    font-size: 36px;
+    color: #02027b;
+    margin-top: 20px;
+}
+
+.contact-us {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+}
+
+.contact-us a {
+    color: rgba(60, 28, 201, 0.815);
+    text-decoration: none;
+}
+
+.contact-us a:hover {
+    color: red;
+}
+
+/* Copyright */
+.Copyright {
+    text-align: center;
+    color: #212529;
+    margin-bottom: 75px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .bio-block {
+        width: 80%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .my-skill {
+        padding-left: 10vw;
+    }
+
+    .skill {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .box {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 36px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    .bio-block {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container {
+        flex-flow: row wrap;
+    }
+
+}
